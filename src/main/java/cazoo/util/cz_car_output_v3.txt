@@ -1,0 +1,5 @@
+MAKE_MODEL,VARIANT_REG,YEAR_BODY
+Volkswagen Golf,1.5 TSI EVO SE Nav SG18 HTN,2018 Hatchback 5dr Petrol Manual
+BMW 1 Series,2.0 120d M Sport AD58 VNF,2008 Coupe 2dr Diesel Manual
+Toyota Yaris,1.0 VVT-i T2 BW57 BOF,2008 Hatchback 3dr Petrol Manual
+Skoda Superb,2.0 TDI SportLine KT17 DLX,2017 Estate 5dr Diesel Automatic
