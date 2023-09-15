@@ -1,18 +1,19 @@
 #  Project : Identitytask
 Selenium webdriver, Java, TestNG and Extent reports
-TestResuts folder: (IdentityE2ETask\TestResuts): the automation test run reports.
 
-Test Package: cazooTest
+**TestResuts folder:** (IdentityE2ETask\TestResuts): the automation test run reports.
+
+**Test Package: cazooTest**
 
 Test Case: CazooTest (IdentityE2ETask\src\test\java\cazooTest\CazooTest.java )
 
 Page classes: 
 
-Package: cazooPages
+**Package: cazooPages**
  
-1. cazooPage: all the verification methods in this page class.
+1. cazooPage: all the verification methods in this page class. (IdentityE2ETask\src\main\java\cazoo\Pages\cazooPage.java)
 
-Util Package:
+**Util Package:** (IdentityE2ETask\src\main\java\cazoo\util)
    
 1. CarConstants.java: It contains the Chrome driver, website URL, and input and output file paths.
 
