@@ -8,6 +8,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -19,6 +22,25 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import cazoo.util.CarConstants;
 public class cazooPage {
+	
+	public static List<String> readCarRegInputTextFile() throws IOException {
+		String regex="([A-Z]{2}[0-9]{2}[A-Z]{3})|(([A-Z]{2}[0-9]{2} [A-Z]{3}))";
+		File file = new File(CarConstants.carInputFile);
+		BufferedReader br= new BufferedReader(new FileReader(file));
+		String st = null;
+		
+		List<String> l1 = new ArrayList<String>();
+		while ((st= br.readLine()) != null) {
+	        Pattern p=Pattern.compile(regex);
+	        Matcher m = p.matcher(st);
+	        
+		    while(m.find()) {
+		    	l1.add(m.group());
+		    }   		
+		}
+		
+	    return l1;
+	}
 	public static List<String> readInputTextFile() throws IOException {
 		File file = new File(CarConstants.carInputFile);
 		BufferedReader br= new BufferedReader(new FileReader(file));

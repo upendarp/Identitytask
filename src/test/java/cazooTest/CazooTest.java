@@ -44,7 +44,7 @@ public class CazooTest {
 	 }
 	@Test()
 	 public void B1_EnterCarReg () throws IOException, InterruptedException {
-		List<String> l1=cazooPage.readInputTextFile();
+		List<String> l1=cazooPage.readCarRegInputTextFile();
 		boolean result=cazooPage.enterCarReg(driver,test,l1);	    
 		Assert.assertTrue(result,"Car details search is successfull");
 	}
