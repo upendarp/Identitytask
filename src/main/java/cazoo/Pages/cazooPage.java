@@ -41,50 +41,6 @@ public class cazooPage {
 		
 	    return l1;
 	}
-	public static List<String> readInputTextFile() throws IOException {
-		File file = new File(CarConstants.carInputFile);
-		BufferedReader br= new BufferedReader(new FileReader(file));
-		String st = null;
-		List<String> l1 = new ArrayList<String>();
-		while ((st= br.readLine()) != null) {
-			String s[]=st.split(" ");
-			for(int i=0;i<s.length;i++) {
-				if(s[i].equalsIgnoreCase("registration")) {
-					if(s[i+1].length()>4) {
-						l1.add(s[i+1].replace(".",""));
-					}else {
-						String s1=s[i+1]+" "+s[i+2];						
-						l1.add(s1.replace(".",""));
-					}
-				}else if(s[i].equalsIgnoreCase("registrations")){
-					if(s[i+1].length()>4) {
-						l1.add(s[i+1].replace(".",""));
-						if(s[i+2].equalsIgnoreCase("and")) {
-							if(s[i+3].length()>5) {
-								l1.add(s[i+3].replace(".",""));
-								
-							}else {
-	
-								String s1=s[i+3]+" "+s[i+4];
-								l1.add(s1.replace(".",""));
-								
-							}
-							
-						}
-					}else {
-						String s1=s[i+1]+" "+s[i+2];
-						l1.add(s1);
-					}
-					
-				}
-			}
-			
-		}
-		
-		return l1;
-		
-	}
-
 
 	public static boolean enterCarReg (WebDriver driver,ExtentTest test,List<String> l1) throws IOException, InterruptedException {
 		File file1 = new File(CarConstants.carOuputFile);
